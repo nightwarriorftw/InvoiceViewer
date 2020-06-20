@@ -1,13 +1,9 @@
-import {
-    START_FETCH,
-    FINISH_FETCH,
-    FAIL_FETCH,
-} from "../actions/types";
+import { START_FETCH, FINISH_FETCH, FAIL_FETCH } from "../actions/types";
 
 const initialState = {
   info: {},
   isFetching: false,
-  error: null
+  error: null,
 };
 
 const info = (state = initialState, action) => {

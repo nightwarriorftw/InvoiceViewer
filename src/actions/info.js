@@ -1,35 +1,32 @@
-import { 
-    FAIL_FETCH,
-    START_FETCH,
-    FINISH_FETCH,
-} from './types';
-import Axios from 'axios';
+import { FAIL_FETCH, START_FETCH, FINISH_FETCH } from "./types";
 
 export const startFetchData = () => ({
-  type: START_FETCH
+  type: START_FETCH,
 });
 
-export const failFetchData = error => ({
+export const failFetchData = (error) => ({
   type: FAIL_FETCH,
-  payload: error
+  payload: error,
 });
 
-export const finishFetchData = data => ({
+export const finishFetchData = (data) => ({
   type: FINISH_FETCH,
-  payload: data
+  payload: data,
 });
 
 export function fetchProducts() {
-  return dispatch => {
+  return (dispatch) => {
     dispatch(startFetchData());
-    return Axios("http://ec2-13-127-117-101.ap-south-1.compute.amazonaws.com:8080/api/invoice")
+    return fetch(
+      "http://ec2-13-127-117-101.ap-south-1.compute.amazonaws.com:8080/api/invoice"
+    )
       .then(handleErrors)
-      .then(res => res.json())
-      .then(json => {
+      .then((res) => res.json())
+      .then((json) => {
         dispatch(finishFetchData(json.data));
         return json.data;
       })
-      .catch(error => dispatch(failFetchData(error)));
+      .catch((error) => dispatch(failFetchData(error)));
   };
 }
 
@@ -40,3 +37,4 @@ function handleErrors(response) {
   }
   return response;
 }
+

@@ -9,12 +9,31 @@
 .company-info{
     font-family: 'Courier New', Courier, monospace;
     color: #696969;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .info {
     display: flex;
+    flex: 33.33%;
     flex-direction:row;
     align-content: space-between;
     justify-content: space-between;
+}
+
+.client-info{
+    font-family: 'Courier New', Courier, monospace;
+    color: #696969;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 992px) {
+  .info {
+    flex: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .info {
+    flex-direction: column;
+  }
 }
