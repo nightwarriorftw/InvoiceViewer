@@ -1,25 +1,31 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux';
-import Header from '../layouts/Header';
+
 import Info from '../layouts/Info';
+import Header from '../layouts/Header';
+
 import { fetchProducts } from '../../actions/info';
+import Loader from '../snippets/Loader';
 
 class Main extends PureComponent {
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.dispatch(fetchProducts());
     }
 
     render() {
-        const {info, isFetching, error} = this.props;
+        const { info, isFetching, error } = this.props;
 
-        if(isFetching){
-            return (<h1>Loading..</h1>)
+        if (isFetching) {
+            return (
+                <Loader />
+            )
+
         }
         return (
             <div className='container'>
                 <div className='main'>
-                    <Header info={info} error={error} pending={isFetching}/>
+                    <Header info={info} error={error} pending={isFetching} />
                     <Info />
                 </div>
             </div>
