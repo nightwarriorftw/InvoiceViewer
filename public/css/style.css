@@ -1,0 +1,20 @@
+.container {
+    margin: 30px;
+}
+.main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.company-info{
+    font-family: 'Courier New', Courier, monospace;
+    color: #696969;
+    font-size: 15px;
+}
+
+.info {
+    display: flex;
+    flex-direction:row;
+    align-content: space-between;
+    justify-content: space-between;
+}
