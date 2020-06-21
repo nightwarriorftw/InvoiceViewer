@@ -37,3 +37,38 @@
     flex-direction: column;
   }
 }
+
+.total{
+  display: flex;
+  float: right;
+  margin-top: -50px;
+}
+
+.boxTotal{
+  background-color:#E8E8E8;
+  padding: 70px;
+  border-radius: 5px;
+}
+
+.terms-info{
+    font-family: 'Courier New', Courier, monospace;
+    color: #696969;
+    font-size: 12px;
+}
+
+.terms-heading{
+  margin-top: 10px;
+  font-size: 14px;
+}
+.print{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-cancel{
+  margin-left: 10px;
+  background-color: grey;
+}

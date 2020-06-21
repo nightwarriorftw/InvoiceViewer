@@ -1,4 +1,4 @@
-import { START_FETCH, FINISH_FETCH, FAIL_FETCH } from "../actions/types";
+import { START_FETCH, FINISH_FETCH, FAIL_FETCH, CHANGE_FONT } from "../actions/types";
 
 const initialState = {
   info: {},

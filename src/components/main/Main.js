@@ -1,46 +1,16 @@
-import React, { PureComponent } from "react";
+import React, { PureComponent } from 'react'
+import SubMain from './SubMain';
+import PrintCancel from './PrintCancel';
 
-import Info from "../layouts/Info";
-import Header from "../layouts/Header";
-
-import { connect } from "react-redux";
-import Loader from "../snippets/Loader";
-import { fetchProducts } from "../../actions/info";
-import Description from "../layouts/Description";
-
-class Main extends PureComponent {
-  componentDidMount() {
-    this.props.fetchProducts();
-  }
+export default class Main extends PureComponent {
   render() {
-    const { info, isFetching, error } = this.props;
-    if (isFetching) {
-      return <Loader />;
-    }
-    if (error) {
-      return <div>Error: {error} </div>;
-    }
     return (
-      <div className="container">
-        <div className="main">
-          <Header info={info}/>
-          <br/>
-          <Info info={info}/>
-          <Description />
+      <div>
+        <div id='SubMain'>
+          <SubMain />
         </div>
+        <PrintCancel />
       </div>
-    );
+    )
   }
 }
-
-const mapStateToProps = (state) => ({
-  info: state.info.info,
-  isFetching: state.info.isFetching,
-  error: state.info.error,
-});
-
-const mapDispatchToProps = {
-  fetchProducts,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Main);

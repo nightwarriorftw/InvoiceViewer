@@ -1,4 +1,4 @@
-import { FAIL_FETCH, START_FETCH, FINISH_FETCH } from "./types";
+import { FAIL_FETCH, START_FETCH, FINISH_FETCH, CHANGE_FONT } from "./types";
 
 export const startFetchData = () => ({
   type: START_FETCH,

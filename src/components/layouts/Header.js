@@ -1,15 +1,20 @@
 import React, { PureComponent } from "react";
 
+const companyInfo = {
+  fontFamily: 'Courier New',
+  color: '#696969',
+  fontSize: '9px'
+}
 class Header extends PureComponent {
   render() {
-      const company = {
-        name: '',
-        address: '',
-        email: '',
-        mobile: '',
-        logo: ''
-      }
-      const data = this.props.info.company || company;    
+    const company = {
+      name: '',
+      address: '',
+      email: '',
+      mobile: '',
+      logo: ''
+    }
+    const data = this.props.info.company || company;
     return (
       <div className="header">
         <img
@@ -18,7 +23,7 @@ class Header extends PureComponent {
           width="50px"
           height="50px"
         />
-        <div className="company-info">
+        <div style={companyInfo}>
           <p>{data.name}</p>
           <p>{data.address}</p>
           <p>{data.email}</p>

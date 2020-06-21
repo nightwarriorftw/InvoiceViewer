@@ -1,5 +1,20 @@
 import React, { PureComponent } from 'react'
 
+const info = {
+    display: 'flex',
+    flex: '33.33%',
+    flexDirection: 'row',
+    alignContent: 'space-between',
+    justifyContent: 'space-between',
+}
+
+const clientInfo = {
+    fontFamily: 'Courier New',
+    color: '#696969',
+    fontSize: '9px'
+}
+
+
 export default class Info extends PureComponent {
     render() {
         const clientData = {
@@ -22,10 +37,10 @@ export default class Info extends PureComponent {
         const order = this.props.info.order || orderData;
         return (
             <div>
-                <div className='row info'>
-                    <div className='col-3 col-md-4 col-sm-12' >
+                <div className='row' style={info}>
+                    <div className=' col-3 col-md-4 col-sm-12' >
                         Client Information:
-                        <div className='client-info'>
+                        <div style={clientInfo}>
                             <br />
                             <p><strong style={{ color: 'black' }}>{data.name}</strong></p>
                             <p>{data.address}</p>
@@ -35,7 +50,7 @@ export default class Info extends PureComponent {
                     </div>
                     <div className='col-3 col-md-4 col-sm-12' >
                         Order Information
-                        <div className='client-info'>
+                        <div style={clientInfo}>
                             <br/>
                             <p><strong>Date: </strong>{order.date}</p>
                             <p><strong>Status: </strong>
@@ -45,8 +60,8 @@ export default class Info extends PureComponent {
                         </div>
                     </div>
                     <div className='col-3 col-md-4 col-sm-12'>
-                        Invoice Number {order.invoice}
-                        <div className='client-info'>
+                        Invoice Number {order.invoice_number}
+                        <div style={clientInfo}>
                             <br/>
                             <div style={{color: '#00BFFF'}}>TOTAL DUE: {order.currency}{order.amount}</div>
                         </div>
