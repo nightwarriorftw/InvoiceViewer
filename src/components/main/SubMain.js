@@ -23,7 +23,7 @@ class SubMain extends PureComponent {
     this.props.fetchProducts();
   }
   render() {
-    const { info, isFetching, error, } = this.props;
+    const { info, isFetching, error, font} = this.props;
     if (isFetching) {
       return <Loader />;
     }
@@ -34,7 +34,7 @@ class SubMain extends PureComponent {
       <div>
         <div style={container}>
           <div style={main}>
-            <Header info={info} />
+            <Header info={info} size={font}/>
             <br />
             <Info info={info} />
             <Description info={info} />
@@ -51,6 +51,7 @@ const mapStateToProps = (state) => ({
   info: state.info.info,
   isFetching: state.info.isFetching,
   error: state.info.error,
+  font: state.info.font,
 });
 
 const mapDispatchToProps = {

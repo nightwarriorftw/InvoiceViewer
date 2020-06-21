@@ -4,6 +4,7 @@ const initialState = {
   info: {},
   isFetching: false,
   error: null,
+  font: '10px',
 };
 
 const info = (state = initialState, action) => {
@@ -11,9 +12,11 @@ const info = (state = initialState, action) => {
     case START_FETCH:
       return { ...state, isFetching: true };
     case FINISH_FETCH:
-      return { isFetching: false, info: action.payload, error: null };
+      return {...state, isFetching: false, info: action.payload, error: null };
     case FAIL_FETCH:
       return { ...state, isFetching: false, error: action.payload };
+    case CHANGE_FONT:
+      return {...state, font:action.payload}
     default:
       return state;
   }

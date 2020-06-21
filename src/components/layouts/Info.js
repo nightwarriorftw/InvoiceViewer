@@ -1,13 +1,5 @@
 import React, { PureComponent } from 'react'
 
-const info = {
-    display: 'flex',
-    flex: '33.33%',
-    flexDirection: 'row',
-    alignContent: 'space-between',
-    justifyContent: 'space-between',
-}
-
 const clientInfo = {
     fontFamily: 'Courier New',
     color: '#696969',
@@ -37,7 +29,7 @@ export default class Info extends PureComponent {
         const order = this.props.info.order || orderData;
         return (
             <div>
-                <div className='row' style={info}>
+                <div className="row info">
                     <div className=' col-3 col-md-4 col-sm-12' >
                         Client Information:
                         <div style={clientInfo}>
@@ -63,7 +55,7 @@ export default class Info extends PureComponent {
                         Invoice Number {order.invoice_number}
                         <div style={clientInfo}>
                             <br/>
-                            <div style={{color: '#00BFFF'}}>TOTAL DUE: {order.currency}{order.amount}</div>
+                            <div style={{color: '#00BFFF', fontSize: '11px'}}>TOTAL DUE: {order.currency}{order.amount}</div>
                         </div>
                     </div>
                 </div>

@@ -14,6 +14,13 @@ export const finishFetchData = (data) => ({
   payload: data,
 });
 
+
+
+export const changeFont = (data) => ({
+  type: CHANGE_FONT,
+  payload: data,
+})
+
 export function fetchProducts() {
   return (dispatch) => {
     dispatch(startFetchData());
@@ -38,3 +45,8 @@ function handleErrors(response) {
   return response;
 }
 
+export const changeFontHandler = (data) => {
+  return (dispatch)=> {
+    dispatch(changeFont(data));
+  }
+}

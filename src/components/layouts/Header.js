@@ -24,7 +24,7 @@ class Header extends PureComponent {
           height="50px"
         />
         <div style={companyInfo}>
-          <p>{data.name}</p>
+          <p style={{fontSize: this.props.size}}>{data.name}</p>
           <p>{data.address}</p>
           <p>{data.email}</p>
           <p>{data.mobile}</p>

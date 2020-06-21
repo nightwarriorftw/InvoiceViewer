@@ -10,7 +10,7 @@ const totalStyle = {
 const clientInfo = {
     fontFamily: 'Courier New',
     color: '#696969',
-    fontSize: '9px'
+    fontSize: '10px'
 }
 
 export default function Total(props) {
@@ -27,7 +27,7 @@ export default function Total(props) {
                     <p><strong>Sub Total: </strong>{currency}{totalAmount}</p>
                     <p><strong>Taxes(10%): </strong>{currency}{taxes}</p>
                     <p><strong>Discount(5%): </strong>{currency}{discount}</p>
-                    <p style={{color: '#00BFFF'}}><strong>Total: </strong>{currency}{total}</p>
+                    <p style={{color: '#00BFFF', fontSize: '11px'}}><strong>Total: </strong>{currency}{total}</p>
                 </div>
             </div>
         </div>
