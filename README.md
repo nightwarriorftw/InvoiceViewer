@@ -38,23 +38,21 @@ yarn start
 ```
 
 ## :camera: Gallery
-Front Page
-![Front page](./public/1.png)
+UI of the page
+![Front page](./public/img/1.png)
 
-Search results for the client favourite movie
-![Search Results Page](./public/2.png)
-Detailed View of Search result
-![Details Page](./public/3.png)
+Custom font size modal
+![Search Results Page](./public/img/2.png)
+
+Generated Video
+![Details Page](./public/img/3.png)
 
 ## :star2: Ack
 **Tech Stack used**
-
-- Django, HTML5, CSS3, Javascript (Intermediate)
-- Docker (Very familiar)
-- Database Postgress(Production), Sqlite3(Staging)
+- React and Redux
 
 ## :lock: License
 
 [LICENSE](/LICENSE)
 
-*Haven't uploaded the database. Please make an issue on the repo in case you want me to upload*
+*Not hosted ATM because the API provided are HTTP. So calling HTTP APIs from HTTPS results in hosting errors. Have recorder video though*
